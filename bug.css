@@ -1,0 +1,1 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, sometimes unexpected behavior can occur due to whitespace issues or incorrect operator precedence. For instance, using extra spaces around the + or - operators can cause `calc()` to fail in some browsers. Also, missing multiplication signs (*) can lead to unexpected results.
