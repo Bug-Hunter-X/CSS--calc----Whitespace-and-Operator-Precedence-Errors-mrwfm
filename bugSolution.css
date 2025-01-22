@@ -1,0 +1,21 @@
+The issue lies in the spacing within the `calc()` function and potentially missing multiplication operators. Here's how to fix it:
+
+Incorrect (bug.css):
+```css
+.element {
+  width: calc(200px + 50px ); /* Extra space around + */
+  height: calc(100px + 50% ); /* Missing * */
+}
+```
+
+Corrected (bugSolution.css):
+```css
+.element {
+  width: calc(200px + 50px);
+  height: calc(100px + 50%*1); /* Explicit multiplication */
+  /* Or use a more readable version for percentage */
+  height: calc(100px + 50% );
+}
+```
+
+Always carefully review the spacing in your `calc()` expressions and be mindful of the order of operations.  Use parentheses for complex calculations to avoid ambiguity.
